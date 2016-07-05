@@ -24,5 +24,20 @@ describe(Triangle) do
       expect(new_triangle.triangle_type()).to eq("not a triangle")
     end
 
+    it('returns "not a triangle" if any two sides add up to be equal to the third side') do
+      new_triangle = Triangle.new(44, 22, 22)
+      expect(new_triangle.triangle_type()).to eq("not a triangle")
+    end
+
+    it('returns "not a triangle" if any side == 0') do
+      new_triangle = Triangle.new(44, 0, 22)
+      expect(new_triangle.triangle_type()).to eq("not a triangle")
+    end
+
+    it('returns "not a triangle" if any side is a negative number') do
+      new_triangle = Triangle.new(44, 22, -22)
+      expect(new_triangle.triangle_type()).to eq("not a triangle")
+    end
+
   end
 end

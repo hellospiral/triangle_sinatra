@@ -7,7 +7,7 @@ class Triangle
   end
 
   define_method(:triangle_type) do
-    if (@side_a + @side_b < @side_c) || (@side_b + @side_c < @side_a) || (@side_a + @side_c < @side_b)
+    if (@side_a + @side_b <= @side_c) || (@side_b + @side_c <= @side_a) || (@side_a + @side_c <= @side_b)
       "not a triangle"
     else
       if @side_a == @side_b && @side_b == @side_c && @side_a == @side_c
